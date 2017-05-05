@@ -12,7 +12,7 @@ int main()
     cin  >> number_of_bars;
     cin  >> one_weight;
     total_weight = one_weight * number_of_bars;
-    cout << number_of_bars << "candy bars \n";
+    cout << number_of_bars << " candy bars \n";
     cout << one_weight << " ounces each \n";
     cout << "Total weight is " << total_weight << " ounces.\n";
 
@@ -25,7 +25,7 @@ int main()
 
     total_weight = one_weight * number_of_bars;
 
-    cout << number_of_bars << "candy bars \n";
+    cout << number_of_bars << " candy bars \n";
     cout << one_weight << " ounces each \n";
     cout << "Total weight is " << total_weight << " ounces.\n";
 
