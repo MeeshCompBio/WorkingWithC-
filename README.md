@@ -19,12 +19,44 @@ Just random code I am writing to learn C++. I am using the book "Problem solving
 * int operations are not rounded, everything after the decimal is discarded (10/3 =3)
   * to spit out decimal number with limited number of decimals, use something like
 ```cpp
-    cout.setf(ios::fixed);
-    cout.setf(ios::showpoint);
-    cout.precision(2);
+        cout.setf(ios::fixed);
+        cout.setf(ios::showpoint);
+        cout.precision(2);
 ```
 
 ## Other types
 * Type char can only hold single character like 'a' or 'A' 
 * Type string double quotes makes a string type. (so 'a' != "a")
 * Type Bool self-explanitory
+    * Two statements must be true (2 < x) && (x < 7)
+    * Either can be true (2 < x) || (x < 7)
+    * To negate an expression !(x < 2) which is the same as (x >= 2)
+
+## Flow control
+
+### if else
+```cpp
+if (something)
+{
+    run this command;
+    then this one;
+}
+else
+{
+    run this command;
+    then this one;
+}
+```
+
+## while loop
+```cpp
+while (x > 10)
+{
+    run this command;
+    then this one;
+}
+
+```
+
+
+
