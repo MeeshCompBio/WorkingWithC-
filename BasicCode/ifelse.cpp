@@ -13,6 +13,13 @@ int main( )
 
     if (hours > 40)
         gross_pay = rate * 40 + 1.5 * rate * (hours-40);
+    else if (hours == 0)
+        if (rate == 0 )
+            //this will only output if hours is also zero
+            //I just wanted to show a nested if
+            cout << "We don't pay you anything\n";
+        else
+            cout << "You didn't work this week\n";
     else
         gross_pay = rate * hours;
 
