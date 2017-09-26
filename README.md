@@ -61,6 +61,39 @@ do
     then this one
 } while (x > 10);
 ```
+
+## switch
+```cpp
+switch (controllingExpression)
+{
+    // Case can be int or anything else
+    case 'A':
+        run this command;
+        break;
+    case 'B':
+        run this one instead;
+        break;
+    // if nothing else is met
+    default:
+        run this command;
+}
+```
+
+### Block
+A block is some C== code enclosed in brackets. Any variable declared in a block are local to the block so that variable name can be used outside the block for something else. When you declare a local variable within a block is local to the bock so if you have a block within a block, the local variable only exists in the block it was called in. 
+
+```cpp
+    if ((sale_type == 'R') || (sale_type == 'r'))
+    {
+        total = price * number;
+    }
+    else if ((sale_type == 'W') || (sale_type == 'w'))
+    {
+        double subtotal;
+        subtotal = price * number;
+        total = subtotal + subtotal * TAX_RATE;
+    }
+```
 ## Boolean
 * Type Bool self-explanitory
     * Two statements must be true (2 < x) && (x < 7)
