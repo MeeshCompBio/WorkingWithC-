@@ -32,7 +32,7 @@ Just random code I am writing to learn C++. I am using the book "Problem solving
 
 ## Flow control
 * You can increment variable with ++var or var++ to go up by one or --var/var-- to go down by one
-    *use ++var and --var though since var-- returns number first then goes down by one instead of going down by one then returning it
+    *keep in mind that ++var/--var function differntly the var++/var-- since var-- returns number first then goes down by one instead of going down by one then returning it
 ### if else
 ```cpp
 if (something)
@@ -140,4 +140,13 @@ A block is some C== code enclosed in brackets. Any variable declared in a block 
 | Boolean operations | ==,!=       |          |
 | Boolean operations | &&          |          |
 | Boolean operations | \|\|          | Low      |
+
+## Function calls
+* Function can have multiple arguments but can only reutrn one value
+    * If function takes multiple args then they are seperated by commas
+### Type casting
+* You can convert value of type int to type double using 
+```cpp
+static_cast<double>(9)
+```
 
