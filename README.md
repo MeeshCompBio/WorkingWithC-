@@ -31,7 +31,8 @@ Just random code I am writing to learn C++. I am using the book "Problem solving
 
 
 ## Flow control
-
+* You can increment variable with ++var or var++ to go up by one or --var/var-- to go down by one
+    *use ++var and --var though since var-- returns number first then goes down by one instead of going down by one then returning it
 ### if else
 ```cpp
 if (something)
