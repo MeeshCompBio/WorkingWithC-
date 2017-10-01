@@ -79,6 +79,35 @@ switch (controllingExpression)
         run this command;
 }
 ```
+* break statements can be used to exit loops (see above example)
+
+### for loop
+```cpp
+// for (Initialization_Action; Boolean_Expression; Update Action)
+int n;
+n = 1;
+// notice no semicolon after parenthesis
+for (n; n <= 10;  ++n)
+    sum = sum +n;
+```
+* you can increment by any number instead of just one
+```cpp
+for (n; n <= 10; n = n + 2)
+```
+* When designing a loop, you need to design three things
+    * The body of the loop
+    * The initializing statement
+    * The condition for ending the loop
+* Four common methods for ending an INPUT loop
+    * List headed by size
+    * Ask before iterating
+    * List ended with a sentinel value
+    * Running out of input
+* General techniques for ending loops
+    * Count-controll
+    * Ask before iterating
+    * Exit on a flag condition
+    
 
 ### Block
 A block is some C== code enclosed in brackets. Any variable declared in a block are local to the block so that variable name can be used outside the block for something else. When you declare a local variable within a block is local to the bock so if you have a block within a block, the local variable only exists in the block it was called in. 
