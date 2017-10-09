@@ -142,8 +142,30 @@ A block is some C== code enclosed in brackets. Any variable declared in a block 
 | Boolean operations | \|\|          | Low      |
 
 ## Function calls
-* Function can have multiple arguments but can only reutrn one value
+* Function can have multiple arguments but can only reuturn one value
     * If function takes multiple args then they are seperated by commas
+    * Function calls can return a boolean value
+* Function declarations are normally plaved before the main part of your program
+* Function definitions are normally placed at the end of the main program
+* A function must have a return statement
+
+```cpp
+//Function declare
+Type_to_Return Function_Name(Params);
+// Put comments on function declaration here
+
+//Function definition
+Type_to_Return Function_Name(Params)
+{    
+    Declaration1
+    Declaration2
+    ...
+    Executable_Statement1
+    Executable_Statement2
+    return (some_thing)
+}
+```
+
 ### Type casting
 * You can convert value of type int to type double using 
 ```cpp
