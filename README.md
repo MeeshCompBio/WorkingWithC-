@@ -24,6 +24,7 @@ Just random code I am writing to learn C++. I am using the book "Problem solving
         cout.precision(2);
 ```
 * use const int/double to create a variable values that can't be changed
+* If const is declared in beginning of program outside of the body it will be a global named constant
 
 ## Other types
 * Type char can only hold single character like 'a' or 'A' 
@@ -148,6 +149,7 @@ A block is some C== code enclosed in brackets. Any variable declared in a block 
 * Function declarations are normally plaved before the main part of your program
 * Function definitions are normally placed at the end of the main program
 * A function must have a return statement
+* Variables called with body of function are local to the function
 
 ```cpp
 //Function declare
