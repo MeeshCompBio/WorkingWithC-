@@ -5,7 +5,7 @@ using namespace std;
 int main( )
 {
     char grade;
-    cout << "Enter you midterm frade and press Return: ";
+    cout << "Enter you midterm grade and press Return: ";
     cin  >> grade;
 
     switch (grade)
