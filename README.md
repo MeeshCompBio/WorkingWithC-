@@ -33,7 +33,7 @@ Just random code I am writing to learn C++. I am using the book "Problem solving
 
 ## Flow control
 * You can increment variable with ++var or var++ to go up by one or --var/var-- to go down by one
-    *keep in mind that ++var/--var function differntly the var++/var-- since var-- returns number first then goes down by one instead of going down by one then returning it
+    * keep in mind that ++var/--var function differntly the var++/var-- since var-- returns number first then goes down by one instead of going down by one then returning it
 ### if else
 ```cpp
 if (something)
@@ -125,6 +125,41 @@ A block is some C== code enclosed in brackets. Any variable declared in a block 
         total = subtotal + subtotal * TAX_RATE;
     }
 ```
+
+### Block Scopr
+The socpe of a local variable refers to the part of a program that can directly access that variable
+* global scope is anything outside the body of the function (normally at the beginning)
+* scope rules stat that identifiers declared within thier block are local to that vlock and accessible only from the point they are defined to the end of that block
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// A variable can only be accessed directly within its scope
+const double GLOBAL_CONST = 1.0; // this is global to entire script
+
+int function(int param);
+
+int main()                     // Local scope to main
+{
+    int x;
+    double d = GLOBA_CONST;
+
+    for (int i =0; i < 10; i++) // Block scopt to variable i 
+    {
+        x = function1(i);       // End block scopt to variable i
+    }
+    return 0,
+}                               // End local scope to main
+
+int function1(int param) // Local scope to function one
+{
+    double y = GLOBAL_CONST;
+    ...
+    return 0;
+}
+```
+
 ## Boolean
 * Type Bool self-explanitory
     * Two statements must be true (2 < x) && (x < 7)
@@ -174,3 +209,6 @@ Type_to_Return Function_Name(Params)
 static_cast<double>(9)
 ```
 
+## Namspaces
+* Start of the file is not always the best place for namespaces
+* Using using namespace within a funtion makes it local to that function
