@@ -202,6 +202,21 @@ Type_to_Return Function_Name(Params)
     return (some_thing)
 }
 ```
+### Overloading functions
+* You give twor or more different definitions for the same funcitons in C++ (overloading)
+* when you overload a function name, the function delarations for the two different definitions must differ in thier formal parameters
+```cpp
+double ave (double n1, double n2)
+{
+    return ((n1 + n2)/2.0);
+}
+
+double ave (double n1, double n2, double n3)
+{
+    return ((n1 + n2 + n3)/3.0);
+}
+
+```
 
 ### Type casting
 * You can convert value of type int to type double using 
@@ -209,6 +224,6 @@ Type_to_Return Function_Name(Params)
 static_cast<double>(9)
 ```
 
-## Namspaces
+## Namespaces
 * Start of the file is not always the best place for namespaces
 * Using using namespace within a funtion makes it local to that function
