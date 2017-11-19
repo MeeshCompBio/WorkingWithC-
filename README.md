@@ -205,6 +205,7 @@ Type_to_Return Function_Name(Params)
 ### Overloading functions
 * You give twor or more different definitions for the same funcitons in C++ (overloading)
 * when you overload a function name, the function delarations for the two different definitions must differ in thier formal parameters
+* C++ will automatically overload a function if for instance you define funtion with type double, but use input an int
 ```cpp
 double ave (double n1, double n2)
 {
@@ -218,6 +219,71 @@ double ave (double n1, double n2, double n3)
 
 ```
 
+## Void Functions
+* functions normally return one or no value at all
+    * You can make a subtask that produces several different values but set it up as if it was a function that returns no value
+* a void function is define in almost the same way as a function that returns a value
+    * The voud function implements only the subtask for outputting the results of the calculations
+```cpp
+// just and example void function
+void show_results(double f_degrees, double c_degrees)
+{
+    using namespace std;
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(1);
+    cout << f_degrees
+         << " degrees Fahrenheit is equivalent to\n"
+         << c_degrees << " degrees Celsius\n";
+    return;
+}
+```
+* Two differences compared to function call
+    * When we call void this tells compiler that it won't return any value
+    * The return statement does not contain an expression for a value to be returned
+* A void function call is an executable statement (ends with semicolon)
+* When a void function is called, the arguments are substituted for the formal parameters and the statements in the function body are executed
+* void functions can have no return statement (still need () after to call it)
+* A return statement in void function simply ends the function call
+    * It does not require a return statement it will end after runnign code in the function body
+    * return statements are usful in if else statments to end void early
+```cpp
+// This void sends a newline command to the screen
+void initialize_screen()
+{
+    using namespace std;
+    cout << endl;
+    return;
+}
+```
+```cpp
+show_results(32.5, 0.3);
+
+// you would call it by doing
+initialize_screen();
+```
+
+```cpp
+// Using return statement to finish void funtion early
+void ice_cream_division(int number, double total_weight);
+
+void ice_cream_division(int number, double total_weight)
+{
+    using namespace std;
+    double portion;
+
+    if (number == 0);
+        return; // This will end void function early
+    portion = total_weight/number;
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);
+    cout << "Each one receives "
+         << protion << " ounces of ice cream." << endl;
+}
+```
+
+
 ### Type casting
 * You can convert value of type int to type double using 
 ```cpp
@@ -226,4 +292,4 @@ static_cast<double>(9)
 
 ## Namespaces
 * Start of the file is not always the best place for namespaces
-* Using using namespace within a funtion makes it local to that function
+* Using using namespace within a function makes it local to that function
