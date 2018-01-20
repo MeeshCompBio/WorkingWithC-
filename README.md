@@ -283,7 +283,20 @@ void ice_cream_division(int number, double total_weight)
 }
 ```
 
+* A call-by-reference parameter can be used to substitue a variable into an input function instead of the actual value
+    * A call-by-reference parameter must be marked in some way so that the complier will know it from a call by value parameter.
+    * You do this by attaching the & sign
 
+```cpp
+void get_input (double& f_variable)
+{
+    using namespace std;
+    cout << "I will convert a F temp"
+         << " to a C temp.\n"
+         << "Enter an F temp";
+    cin  >> f_variable;
+}
+```
 ### Type casting
 * You can convert value of type int to type double using 
 ```cpp
