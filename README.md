@@ -219,6 +219,17 @@ double ave (double n1, double n2, double n3)
 
 ```
 
+### Procedural abstraction
+* A functions main body may contain a call to another function
+    * A function declaration must be declared before it is used
+* It is good form to comment a pre and post condition before a function declaration
+```cpp
+//Precondition: variable1 and variable2 are given values
+//Postcondition: the values of variable1 and variable two are interchanged
+void swap_values(int& variable1, int& variable2);
+```
+
+
 ## Void Functions
 * functions normally return one or no value at all
     * You can make a subtask that produces several different values but set it up as if it was a function that returns no value
@@ -286,6 +297,9 @@ void ice_cream_division(int number, double total_weight)
 * A call-by-reference parameter can be used to substitue a variable into an input function instead of the actual value
     * A call-by-reference parameter must be marked in some way so that the complier will know it from a call by value parameter.
     * You do this by attaching the & sign
+    * Using this will repalce the value based off of the memory location (p. 258 for more details)
+    * If you want a function to change the value of a variable, the corresponding formal parameter must be a call-by-reference parameter and must have the ampersand attached to its type
+        * If this is not done, then any changes will be only local to the function and will have no effect outside of it
 
 ```cpp
 void get_input (double& f_variable)
