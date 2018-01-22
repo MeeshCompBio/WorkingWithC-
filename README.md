@@ -126,7 +126,7 @@ A block is some C== code enclosed in brackets. Any variable declared in a block 
     }
 ```
 
-### Block Scopr
+### Block Scope
 The socpe of a local variable refers to the part of a program that can directly access that variable
 * global scope is anything outside the body of the function (normally at the beginning)
 * scope rules stat that identifiers declared within thier block are local to that vlock and accessible only from the point they are defined to the end of that block
@@ -185,7 +185,8 @@ int function1(int param) // Local scope to function one
 * Function definitions are normally placed at the end of the main program
 * A function must have a return statement
 * Variables called with body of function are local to the function
-
+* Each function should be designed, coded and tested as a seperate unit
+    * 
 ```cpp
 //Function declare
 Type_to_Return Function_Name(Params);
@@ -217,6 +218,18 @@ double ave (double n1, double n2, double n3)
     return ((n1 + n2 + n3)/3.0);
 }
 
+```
+
+### Assertions
+* Assert can be used to make sure expected conditions are ture at the location of the assert statement.
+* Too many assert statements can be hard to debug for someone not familiar with the code
+* You can disable all assert statements using NDEBUG
+```cpp
+// line below deables all assert statements
+#define NDEBUG
+//example assert statment
+#include <cassert>
+assert((n > 0) && (num_iterations > 0 ));
 ```
 
 ### Procedural abstraction
@@ -320,3 +333,37 @@ static_cast<double>(9)
 ## Namespaces
 * Start of the file is not always the best place for namespaces
 * Using using namespace within a function makes it local to that function
+
+## Streams and basic file I/O
+* A stream is a flow of characters (or other kind of data)
+    * In CPP a stream is known as a special type of variable known as object
+* To declare input or output stream you need to declare it just like any other variable
+```cpp
+//load library header
+#include <fstream>
+
+using namespace std;
+
+//example declarations of variables
+ifstream instream;
+ofstream out_stream;
+
+//example opening of a file
+in_stream.open("file.txt");
+
+//this reads in two input numbers from our example file & assigns to var
+int one_num, two_numb;
+in_stream >> one_num >> two_num;
+
+//example write to file
+out_stream.open("outfile.txt");
+
+// This writes strings and content of variables
+out_stream << "one num = " << one_num
+           << "two num = " << two_num;
+
+// make sure to close all of your files at the end of a script
+
+in_stream.close();
+out_stream.close();
+```
