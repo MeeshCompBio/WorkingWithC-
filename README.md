@@ -19,8 +19,11 @@ Just random code I am writing to learn C++. I am using the book "Problem solving
 * int operations are not rounded, everything after the decimal is discarded (10/3 =3)
   * to spit out decimal number with limited number of decimals, use something like
 ```cpp
+        // causes stream to output number of type double
         cout.setf(ios::fixed);
+        // says to always include decimal point
         cout.setf(ios::showpoint);
+        //want two sig figs after decimal point
         cout.precision(2);
 ```
 * use const int/double to create a variable values that can't be changed
@@ -367,3 +370,30 @@ out_stream << "one num = " << one_num
 in_stream.close();
 out_stream.close();
 ```
+* You should always follow a call to open with a test to see whether is was succesful or not
+```cpp
+#include <cstdlib>
+using namespace std;
+
+in_stream.open("stuff.dat");
+if (in_stream.fail())
+{
+    cout << "Can't open file \n";
+    // command to exit program (must use namespace std; at start of function body or scipt)
+    exit(1);
+}
+```
+
+### Appending to a file
+* You need to use a two argument version of open to append to a file
+* If you try to append to a file that does not exsist, then it will create a new file
+```cpp
+ofstream outStream;
+outStream.opem("important.txt", ios::app);
+
+```
+
+## Classes and Objects
+* An object is a variable that has functions as well as data associated with it (such as in_stream.open()
+* A function that is associated with an object is called a member function (such as the open statement above)
+* A type whose variables are objects such as ifstream and ofstream is a called a class 
