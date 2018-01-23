@@ -28,6 +28,15 @@ Just random code I am writing to learn C++. I am using the book "Problem solving
 ```
 * use const int/double to create a variable values that can't be changed
 * If const is declared in beginning of program outside of the body it will be a global named constant
+* Manipulator is a fucntion that is called in a non-traditional way by calling a member function and are placed after the insert operator
+    * Some common manipulators are setw(), setprecision()
+```cpp
+// Must include directive below for manipulators
+#include <iomanip>
+
+using namespace std;
+cout << "Start" << setw(4) << 10 << setw(4) << 20;
+```
 
 ## Other types
 * Type char can only hold single character like 'a' or 'A' 
@@ -132,7 +141,8 @@ A block is some C== code enclosed in brackets. Any variable declared in a block 
 ### Block Scope
 The socpe of a local variable refers to the part of a program that can directly access that variable
 * global scope is anything outside the body of the function (normally at the beginning)
-* scope rules stat that identifiers declared within thier block are local to that vlock and accessible only from the point they are defined to the end of that block
+* scope rules state that identifiers declared within thier block are local to that vlock and accessible only from the point they are defined to the end of that block
+* using directives such as namepace std; should be placed at the beginning of a funciton definition (insude curly braces), so it does not interfear with other using directives
 
 ```cpp
 #include <iostream>
@@ -392,6 +402,8 @@ ofstream outStream;
 outStream.opem("important.txt", ios::app);
 
 ```
+
+* Streams can be an arfument to a fucntion. The only restriction is that the function formal parameter must be call-by-reference
 
 ## Classes and Objects
 * An object is a variable that has functions as well as data associated with it (such as in_stream.open()
