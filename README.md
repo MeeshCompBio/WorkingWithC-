@@ -394,6 +394,16 @@ if (in_stream.fail())
 }
 ```
 
+* The get function allows you to read in one character of input and store it in a variable of type char
+    * It will not skip blanks or special character ('\n')
+        * note that '\n' is a char and "\n" is a string and no longer has one character
+* The put function will output char to stream
+* putback will take the last read char and put it back into the input stream
+```cpp
+char next_symbol;
+cin.get(next_symbol);
+```
+
 ### Appending to a file
 * You need to use a two argument version of open to append to a file
 * If you try to append to a file that does not exsist, then it will create a new file
