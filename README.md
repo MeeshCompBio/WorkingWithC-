@@ -404,6 +404,17 @@ char next_symbol;
 cin.get(next_symbol);
 ```
 
+* EOF memeber function
+    * eof stands for "end of file", does not take any arguments and serves as a boolean to see if there is anything left to read
+```cpp
+if (! fin.eof())
+    cout << "Not done yet.";
+else
+    cout << "End of the file.";
+
+```
+
+
 ### Appending to a file
 * You need to use a two argument version of open to append to a file
 * If you try to append to a file that does not exsist, then it will create a new file
