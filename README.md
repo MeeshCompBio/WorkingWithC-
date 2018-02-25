@@ -430,3 +430,32 @@ outStream.opem("important.txt", ios::app);
 * An object is a variable that has functions as well as data associated with it (such as in_stream.open()
 * A function that is associated with an object is called a member function (such as the open statement above)
 * A type whose variables are objects such as ifstream and ofstream is a called a class 
+
+## Arrays
+* You can decalre array variables of the same type similarly to other variable
+* creating a variable similar to the variable below is called indexed variables
+* indecies start at zero for CPP
+```cpp
+// Five vars of the same type
+int score[5];
+```
+
+* Arrays can be initialized when they are declared
+
+```cpp
+int lotto[3] = {2,52,26};
+
+// This is the same as
+int lotto[3];
+lotto[0] = 2;
+lotto[1] = 52;
+lotto[2] = 26;
+```
+
+* You can use both array indexed variables and entire arrays as arguments in functions
+* You can even set arrays as constants so values do not change
+    * If you are using function calls within function calls, then you should use the same parameter type for all function calls
+```cpp
+const int a [5];
+```
+
