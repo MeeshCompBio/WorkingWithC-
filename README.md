@@ -459,3 +459,5 @@ lotto[2] = 26;
 const int a [5];
 ```
 
+* Sometime you are not aware of the size of the array you need, one way to solve this, is to declare an array of the largest size possibly needed
+    * Be careful, the program must not call upon an partially empty portion of the array or else it will error
