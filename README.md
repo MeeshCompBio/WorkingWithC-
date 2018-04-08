@@ -461,3 +461,19 @@ const int a [5];
 
 * Sometime you are not aware of the size of the array you need, one way to solve this, is to declare an array of the largest size possibly needed
     * Be careful, the program must not call upon an partially empty portion of the array or else it will error
+
+### Multidimensional arrays
+* C++ allows you to declare arrays with more than one index (array of arrays)
+    * First index represents "row" second index represents "column"
+    * When a multidimensianl array parameter is given in a function heading or function declaration, the size of the first dimension is not given, but the remianing dimension sizes must be given in square breackets. Since the first dimesion is not given you need an additional parameter of type int that will give the size of the first dimension. 
+```cpp
+char page [30][100];
+// Then fifth row, column three would would be represented as
+// Indexes start at 0
+page[4][2]
+
+
+// Example declaring 2D array in function call
+void get_page(char p[][100], int size_dimension1);
+```
+
