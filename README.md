@@ -477,3 +477,12 @@ page[4][2]
 void get_page(char p[][100], int size_dimension1);
 ```
 
+## Strings and Vectors
+### C type strings
+* A C string can be stored as an array of type char ending with '\0' to tell C to stop
+```cpp
+// simple string declaration
+char stringvar[11] ="Do Be Do";
+// Will automatically assign sting one longer then length of c string
+char stringvar[] ="Do Be Do";
+```
