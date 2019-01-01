@@ -486,3 +486,47 @@ char stringvar[11] ="Do Be Do";
 // Will automatically assign sting one longer then length of c string
 char stringvar[] ="Do Be Do";
 ```
+* That is a type of initialization, if you want to assign a value to a C-string variable you can use strcpy or strncpy
+```cpp
+char a_string[10];
+a_string = "Hello";
+
+char another_string[10];
+// This will copy at most 9 characters (leaving room for \0)
+strncpy(another_string, a_string, 9);
+```
+
+* You can't ust == to see if two strings are the same, use strcmp instead (note the effect is oposite of what you though)
+```cpp
+if (strcmp(string1, string2))
+    cout << "Stings are not the same";
+else
+    cout << "Strings are the same";
+```
+* Other interesting string fucntions are strcat (concatinate), strncat (limit appended chars), strnlen (returns int of char length), strncmp (limit number of chars compared)
+
+### C-stings I/O
+* You can use >> or << like I have been using for I/O but keep in mind that whitespaces are skipped when c-strings are read in that way
+```cpp
+char a[80], b[80];
+cout << "Enter input";
+cin   >> a >> b;
+cout << a << b << "END OF OUTPUT\n";
+//If I enter DO be do, a gets assined do and b gets assigned be because following input words are balnk whitespaces
+```
+* If you want to read and entire line of input then use the cin.getline command
+```cpp
+char a[80]:
+cout << "Enter input";
+cin.getline(a, 80);
+cout << a << "end ot output";
+```
+
+### C-string to number conversions
+1234 is not that same as "1234"
+You can use atoi, atol or atof. (int, long, float)
+```cpp
+#include <cstdlib>
+int x atoi("657");
+double y = atof("12.37");
+```
