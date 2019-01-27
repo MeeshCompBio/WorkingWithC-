@@ -516,7 +516,7 @@ cout << a << b << "END OF OUTPUT\n";
 ```
 * If you want to read and entire line of input then use the cin.getline command
 ```cpp
-char a[80]:
+char a[80];
 cout << "Enter input";
 cin.getline(a, 80);
 cout << a << "end ot output";
